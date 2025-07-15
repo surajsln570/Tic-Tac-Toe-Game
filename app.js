@@ -38,6 +38,7 @@ reset.addEventListener("click", () => {
         btn[i].innerText = ""
         btn[i].disabled = false
     }
+    hide.innerText = "X Turn"
 })
 function checkwinner() {
     for(let pattern of winpattern){
