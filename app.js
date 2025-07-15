@@ -19,18 +19,18 @@ for (let i = 0; i < btn.length; i++) {
 
             if (player == "X") {
                 hide.innerText = "O turn"
-                
+
                 btn[i].innerText = "X"
                 player = "O"
             }
             else {
                 hide.innerText = "X turn"
-               
+
                 btn[i].innerText = "O"
                 player = "X"
             }
         }
-checkwinner()
+        checkwinner()
     })
 }
 reset.addEventListener("click", () => {
@@ -39,20 +39,20 @@ reset.addEventListener("click", () => {
         btn[i].disabled = false
     }
     hide.innerText = "X Turn"
+    player= "X"
 })
 function checkwinner() {
-    for(let pattern of winpattern){
-        if(btn[pattern[0]].innerText != "" && btn[pattern[1]].innerText != "" && btn[pattern[2]].innerText != ""){
-            if(btn[pattern[0]].innerText==btn[pattern[1]].innerText && btn[pattern[1]].innerText==btn[pattern[2]].innerText){
-                console.log("winner")
+    for (let pattern of winpattern) {
+        if (btn[pattern[0]].innerText != "" && btn[pattern[1]].innerText != "" && btn[pattern[2]].innerText != "") {
+            if (btn[pattern[0]].innerText == btn[pattern[1]].innerText && btn[pattern[1]].innerText == btn[pattern[2]].innerText) {
                 hide.innerText = `Player ${btn[pattern[0]].innerText} has won the match`
-               
-               btn.forEach(element => {
-              element.disabled=true;
 
-               });
-       
-                
+                btn.forEach(element => {
+                    element.disabled = true;
+
+                });
+
+
             }
         }
     }
