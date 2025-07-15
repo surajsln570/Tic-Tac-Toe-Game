@@ -38,7 +38,7 @@ reset.addEventListener("click", () => {
         btn[i].innerText = ""
         btn[i].disabled = false
     }
-    hide.innerText = "X Turn"
+    hide.innerText = "X turn"
     player= "X"
 })
 function checkwinner() {
