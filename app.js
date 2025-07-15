@@ -31,6 +31,7 @@ for (let i = 0; i < btn.length; i++) {
             }
         }
         checkwinner()
+        checkdraw()
     })
 }
 reset.addEventListener("click", () => {
@@ -57,4 +58,21 @@ function checkwinner() {
         }
     }
 
+}
+
+function checkdraw() {
+    let draw = true;
+    btn.forEach(cell => {
+        if(cell.innerText ===""){
+        draw = false;
+        }
+    })
+    if (draw){
+    hide.innerText ="Match Draw"
+    btn.forEach(element => {
+                    element.disabled = true;
+
+                });
+
+}
 }
