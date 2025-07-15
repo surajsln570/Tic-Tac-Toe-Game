@@ -47,8 +47,7 @@ function checkwinner() {
                 hide.innerText = `Player ${btn[pattern[0]].innerText} has won the match`
                
                btn.forEach(element => {
-              element.disabled=true
-              console.log("Button Disabled")
+              element.disabled=true;
 
                });
        
